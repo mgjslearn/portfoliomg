@@ -1,1 +1,1036 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Variables */
+    :root {
+      --font-family: 'comic sans ms', sans-serif;
+      --normal-font: 400;
+      --bold-font: 700;
+      --bolder-font: 900;
+      --bg-color: black;
+      --primary-color: white;
+      --secondary-color: #9370DB;
+      --third-color: #cfc2a1;
+      --primary-shadow: #8b8eaf;
+      --secondary-shadow: #a17a69;
+      --third-shadow: #cfc2a1;
+      --bottom-margin: 0.5rem;
+      --bottom-margin-2: 1rem;
+      --line-height: 1.7rem;
+      --transition: 0.3s;
+    }
+
+    /* Variables end */
+    .contentspacer {
+      padding: 10px;
+      background-color: black;
+    }
+
+    /* nav bar styling */
+    nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      background-color: black;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid var(--secondary-color);
+    }
+
+    nav h1 {
+      color: var(--third-color);
+    }
+
+    nav a {
+      color: var(--third-color);
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.9rem;
+    }
+
+    nav ul li {
+      font-weight: var(--bold-font);
+    }
+
+    .burger-menu {
+      color: var(--primary-color);
+      font-size: 2rem;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      display: none;
+    }
+
+    .introme {
+      font-size: 2rem;
+      center: middle;
+    }
+
+    /* nav bar styling END */
+    /*ABOUT ME Short STYLING*/
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      max-width: 80.75rem;
+      margin: auto;
+    }
+
+    .hero img {
+      height: 28.5rem;
+      width: 40.5rem;
+    }
+
+    .bio {
+      width: 25rem;
+      padding: 0.625rem;
+      border-radius: 6px;
+      box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    }
+
+    .bio h1 {
+      margin-bottom: var(--bottom-margin);
+    }
+
+    .bio p {
+      line-height: var(--line-height);
+      padding: 0.3rem 0;
+    }
+
+    /*ABOUT ME STYLING END*/
+    .wf {
+      background-color: black;
+      color: white;
+      padding: 1rem 6rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /*SKILLS STYLING*/
+
+    .skills {
+      max-width: 68.75rem;
+      margin: auto;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: white;
+    }
+
+    .skill-header {
+      margin-bottom: 1rem;
+      color: var(--third-color);
+    }
+
+    .skills-wrapper img {
+      padding: 1.25rem;
+    }
+
+    .icon {
+      width: 11.875rem;
+      height: 11.25rem;
+    }
+
+    .icon-card {
+      background-color: #fff;
+      border-radius: 11px;
+      box-shadow: 0 3px 10px var(--third-shadow);
+      padding: 20px;
+      margin: 10px;
+    }
+
+    /*SKILLS STYLIGN ENDING*/
+    /**PROJECTS SHOWCASE STYLE*/
+    .row4 {
+      background-color: #cfc2a1;
+      padding: auto;
+      margin-top: 2rem;
+    }
+
+    .project-pic {
+      width: 65%;
+      height: 30%;
+    }
+
+    .projects-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .projects-title {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .project-container {
+      text-align: center;
+      width: 21.875rem;
+      padding: 1rem;
+    }
+
+    .project-container p {
+      padding: 0.4rem;
+      border-radius: 11px;
+      border-color: var(--secondary-color);
+    }
+
+    .project-title {
+      margin-bottom: var(--bottom-margin);
+    }
+
+    .project-details {
+      margin-bottom: var(--bottom-margin);
+    }
+
+    .project-details1 {
+      margin-bottom: var(--bottom-margin);
+      font-size: 14px;
+    }
+
+
+    .project-card {
+      background-color: white;
+      border-radius: 11px;
+      box-shadow: 0 3px 10px var(--primary-shadow);
+      padding: 40px;
+      margin: 10px;
+      min-height: 550px;
+      max-height: 550px;
+    }
+
+    .project-card2 {
+      background-color: white;
+      border-radius: 11px;
+      box-shadow: 0 3px 10px var(--primary-shadow);
+      padding: 40px;
+      margin: 10px;
+      min-height: 400px;
+    }
+
+    .project-link {
+      color: black;
+    }
+
+    /**PROJECTS SHOWCASE STYLE END*/
+    /**** CONTACT STYLE**/
+    .contact {
+      color: var(--third-color);
+      margin-top: 2rem;
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: var(--bottom-margin-2);
+    }
+
+    .contact-form-container {
+      max-width: 40.75rem;
+      margin: 0 auto;
+      padding: 0.938rem;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px var(--secondary-shadow);
+    }
+
+    .socials {
+      display: flex;
+      position: sticky;
+      bottom: 20px;
+    }
+    }
+
+    .socicon {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /**CONTACT STYLE END*/
+    <i class="scroll-up"id="scroll-up"
+    ><img src=""
+    class="socicon up-arrow"
+    alt="scroll-up"
+    /></i><footer><p class="copy">&copy;
+    Copyright 2021</p><p class="copy">Built with &#x2661;
+    by <a href="https://twitter.com/koladechris"target="_blank"
+
+    >Kolade Chris (Ksound)</a></p></footer>footer {
+      background-color: var(--bg-color);
+      padding: 1.25rem;
+      text-align: center;
+      margin: 2rem 0 0;
+    }
+
+
+    /* CSS Resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+    }
+
+    body {
+      font-family: var(--font-family);
+    }
+
+    .row {
+      background-color: white;
+    }
+
+    .col {
+      background-color: black;
+    }
+
+    .row2 {
+      background: linear-gradient(to bottom left, #000066 0%, #cfc2a1 100%);
+      padding: 1rem 9rem;
+      font-color: var(--primary-color);
+      box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    }
+
+    .aboutlong {
+      background: #cfc2a1;
+      padding: 1rem 8rem;
+      font-color: white;
+      box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    }
+
+    .row2 h2 {
+      margin-bottom: var(--bottom-margin);
+      text-align: center;
+    }
+
+    .row2 p {
+      line-height: var(--line-height);
+      padding: 0.4rem;
+    }
+
+    .linespacer {
+      padding: 2px;
+      background-color: black;
+    }
+
+    .div {
+      animation: glitch 1s linear infinte;
+      animation: blur 1s ease-out infinite;
+    }
+
+    /**SLIDESHOWIMAGES STYLING**/
+      {
+      box-sizing: border-box
+    }
+
+    /* Slideshow container */
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+
+      img {
+        vertical-align: middle;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: aflexute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @media only screen and (max-width: 200px) {
+        .text {
+          font-size: 11px
+        }
+      }
+
+      /**STYLE WORD animation**/
+      @import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+      .hidden {
+        opacity: 0;
+      }
+
+      .console-container {
+        font-family: Quicksand;
+        font-size: 4em;
+        text-align: center;
+        height: 200px;
+        width: 600px;
+        display: block;
+        position: absolute;
+        color: white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .console-underscore {
+        display: inline-block;
+        position: relative;
+        top: -0.14em;
+        left: 10px;
+      }
+  </style>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title> Mahathi Gumudavelli | Portfolio </title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="col">
+    <nav>
+      <h1>
+        <a>Mahathi Gumudavelli</a>
+      </h1>
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="https://docs.google.com/document/d/1o730cSd5cD2PoRqB-8fu8NJEOTcbYFUfBzDZOYxyGhg/edit?usp=sharing"
+            class="nav-link">Resume</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#ecs" class="nav-link">Extracurriculars/Hobbies</a></li>
+        <li><a href="#ars" class="nav-link">Awards/Recognitions</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+    </nav>
+    <div class="row">
+      <div class="contentspacer"></div>
+      <div class="wf">
+        <!-- Greeting + About Me Short Answer-->
+        <section class="hero" id="aboutshort">
+          <div class="bio animate__animated animate__shakeX">
+            <h2 class="introme bio-title">Hello!</h2>
+            <h3 class="introme bio-title">My name is Mahathi Gumudavelli</h3>
+          </div>
+
+          <!-- <img src="Mepic.png" alt="me" loading="lazy" class="hero-img" />-->
+          <div class="animate__animated animate__shakeX">
+          </div>
+          <div class="contentspacer"></div>
+          <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title">About Me</h2>
+            <h3 class="bio-title"><i>The Short Answer:</i></h3>
+            <p class="bio-text">
+              Youngest recruited intern at AI-based FinTech company. National Honorable Mention and GA Affiliate NCWIT
+              award
+              winner commending STEM initiatives to reduce gender gap. Dancer and vocalist with appearance on local
+              news
+              channels. Driven to integrate interests in AI and Design.
+            </p>
+          </div>
+        </section>
+        <div id="about" class="contentspacer"></div>
+      </div>
+    </div>
+    <!--About Me-Long Answer-->
+    <div class="row2">
+      <section class="aboutlong">
+        <h2>About Me</h2>
+        <h2> <i>The Medium Length Answer:</i></h2>
+        <p>
+          I am an 18 years old <b style="color: var(--secondary-color)">technology enthusiast, art aficionado, creative
+            thinker, service
+            leader, and problem
+            solver </b>.
+        </p>
+        <p>
+          I feel fulfilled when I have the <b style="color: var(--secondary-color)">creative freedom to learn and
+            innovate </b>. My
+          skills and projects are
+          built
+          with
+          the intention of leaving a mark and setting a positive precedent for future generations.
+        </p>
+        <p>
+          As a female interested in computing and technology, I expanded my scope of efforts to bridge the gender
+          gap
+          from
+          a small school club <b style="color: var(--secondary-color)">Girls In Tech </b>to founding the <b
+            style="color: var(--secondary-color)">
+            Atlanta Chapter of ProjectCSGirls,
+            an international
+            non-profit </b>.
+        </p>
+      </section>
+      <div class="linespacer"></div>
+      <style>
+        .adjhead {
+          font-size: 40px;
+          text-align: center;
+        }
+
+        .scrambleadj {
+          text-align: center;
+          min-height: 100px;
+          font-size: 30px;
+          border-color: red;
+          color: var(--third-color);
+        }
+
+        .whitespacer {
+          padding: 10px;
+          background-color: linear-gradient(to bottom left, #000066 0%, #cfc2a1 100%);
+        }
+
+        .adjsec {
+          background: var(--third-color);
+          padding: 1rem 9rem;
+          font-color: var(--primary-color);
+          box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+        }
+      </style>
+      <div class="adjsec">
+        <div class="whitespacer">
+        </div>
+        <div class="adjhead ">
+          <b>My Adjectives:</b>
+        </div>
+        <div class="whitespacer">
+        </div>
+        <div class="scrambleadj">
+          <div class='console-container'>
+            <span id='text'>
+
+            </span>
+            <div class='console-underscore' id='console'>
+              &#95;
+            </div>
+          </div>
+
+          <div class="adjectives" ;style="border-color: red">
+            <script>
+              // function([string1, string2],target id,[color1,color2])
+              consoleText(['Perseverant', 'Ambitious', 'Creative Thinker', 'Art Aficionado', 'Tech Enthusiast'], 'text', ['#00008B', 'var(--secondary-color)', 'purple', '#00008B', 'purple']);
+
+              function consoleText(words, id, colors) {
+                if (colors === undefined) colors = ['#fff'];
+                var visible = true;
+                var con = document.getElementById('console');
+                var letterCount = 1;
+                var x = 1;
+                var waiting = false;
+                var target = document.getElementById(id)
+                target.setAttribute('style', 'color:' + colors[0])
+                window.setInterval(function () {
+
+                  if (letterCount === 0 && waiting === false) {
+                    waiting = true;
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    window.setTimeout(function () {
+                      var usedColor = colors.shift();
+                      colors.push(usedColor);
+                      var usedWord = words.shift();
+                      words.push(usedWord);
+                      x = 1;
+                      target.setAttribute('style', 'color:' + colors[0])
+                      letterCount += x;
+                      waiting = false;
+                    }, 1000)
+                  } else if (letterCount === words[0].length + 1 && waiting === false) {
+                    waiting = true;
+                    window.setTimeout(function () {
+                      x = -1;
+                      letterCount += x;
+                      waiting = false;
+                    }, 1000)
+                  } else if (waiting === false) {
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    letterCount += x;
+                  }
+                }, 120)
+                window.setInterval(function () {
+                  if (visible === true) {
+                    con.className = 'console-underscore hidden'
+                    visible = false;
+
+                  } else {
+                    con.className = 'console-underscore'
+
+                    visible = true;
+                  }
+                }, 400)
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skills section -->
+    <div class="row3">
+      <section class="skills" id="skills">
+        <h2 class="skill-header">My Top Skills</h2>
+
+        <div class="skills-wrapper">
+          <div class="first-set animate__animated animate__pulse">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiNFNjUxMDAiIGQ9Ik00MSw1SDdsMywzNGwxNCw0bDE0LTRMNDEsNUw0MSw1eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNGRjZEMDAiIGQ9Ik0yNCA4TDI0IDM5LjkgMzUuMiAzNi43IDM3LjcgOHoiPjwvcGF0aD48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMjQsMjV2LTRoOC42bC0wLjcsMTEuNUwyNCwzNS4xdi00LjJsNC4xLTEuNGwwLjMtNC41SDI0eiBNMzIuOSwxN2wwLjMtNEgyNHY0SDMyLjl6Ij48L3BhdGg+PHBhdGggZmlsbD0iI0VFRSIgZD0iTTI0LDMwLjl2NC4ybC03LjktMi42TDE1LjcsMjdoNGwwLjIsMi41TDI0LDMwLjl6IE0xOS4xLDE3SDI0di00aC05LjFsMC43LDEySDI0di00aC00LjZMMTkuMSwxN3oiPjwvcGF0aD4KPC9zdmc+"
+              alt="" loading="lazy" class="icon icon-card" />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxsaW5lYXJHcmFkaWVudCBpZD0iVFFEcmlxc3dyS3dQT25pTHJQVDEyYV83Z2RZNXFOWGFLQzBfZ3IxIiB4MT0iMTYuMzMiIHgyPSIzMi4yOTMiIHkxPSItMi43NDgiIHkyPSI0MS4xMDkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYWE0ZjQiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDdhZDkiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjVFFEcmlxc3dyS3dQT25pTHJQVDEyYV83Z2RZNXFOWGFLQzBfZ3IxKSIgZD0iTTcuMTkyLDcuMTc2bDIuNjI3LDI5Ljc3YzAuMTA5LDEuMjM3LDAuOTcsMi4yOCwyLjE2NCwyLjYyMWwxMC42NDMsMy4wNDEJYzAuODk4LDAuMjU3LDEuODQ5LDAuMjU3LDIuNzQ3LDBsMTAuNjQzLTMuMDQxYzEuMTk0LTAuMzQxLDIuMDU1LTEuMzgzLDIuMTY0LTIuNjIxbDIuNjI3LTI5Ljc3QzQwLjkxMSw2LjAwNiwzOS45OSw1LDM4LjgxNiw1CUg5LjE4NEM4LjAxLDUsNy4wODksNi4wMDYsNy4xOTIsNy4xNzZ6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzM1YzFmMSIgZD0iTTI0LDh2MzEuOWw5Ljg3Ni0yLjgyMmMwLjc5Ny0wLjIyOCwxLjM3MS0wLjkyNCwxLjQ0My0xLjc0OWwyLjI4Ni0yNi4yNDIJQzM3LjY1Niw4LjUwMiwzNy4xOTYsOCwzNi42MDksOEgyNHoiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzMuMSwxM0gyNHY0aDQuOWwtMC4zLDRIMjR2NGg0LjRsLTAuMyw0LjVMMjQsMzAuOXY0LjJsNy45LTIuNkwzMi42LDIxbDAsMEwzMy4xLDEzeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNkNmUwZTkiIGQ9Ik0yNCwxM3Y0aC04LjlsLTAuMy00SDI0eiBNMTkuNCwyMWwwLjIsNEgyNHYtNEgxOS40eiBNMTkuOCwyN2gtNGwwLjMsNS41bDcuOSwyLjZ2LTQuMmwtNC4xLTEuNAlMMTkuOCwyN3oiPjwvcGF0aD48cGF0aCBkPSJNMzMuMSwxM2wtMC41LDhsLTAuNywxMS41TDI0LDM1LjFsLTcuOS0yLjZMMTUuOCwyN2g0bDAuMSwyLjVsNC4xLDEuNGw0LjEtMS40bDAuMy00LjVIMjRoLTQuNGwtMC4yLTRIMjRoNC42bDAuMy00SDI0IGgtOC45bC0wLjMtNEgyNEgzMy4xIE0zNC4xNjQsMTJIMzMuMUgyNGgtOS4yaC0xLjA3OGwwLjA4MSwxLjA3NWwwLjMsNEwxNC4xNzIsMThIMTUuMUgyNGgzLjgyMmwtMC4xNSwySDI0aC00LjZoLTEuMDUxIGwwLjA1MiwxLjA1bDAuMiw0TDE4LjY0OSwyNkgxNS44aC0xLjA1NmwwLjA1OCwxLjA1NGwwLjMsNS41bDAuMDM3LDAuNjgybDAuNjQ5LDAuMjE0bDcuOSwyLjZMMjQsMzYuMTUzbDAuMzEzLTAuMTAzbDcuOS0yLjYgbDAuNjQ0LTAuMjEybDAuMDQxLTAuNjc3bDAuNy0xMS41bDAuNS03Ljk5OEwzNC4xNjQsMTJMMzQuMTY0LDEyeiBNMjAuNzYxLDI2SDI0aDMuMzMxbC0wLjE4NSwyLjc2OUwyNCwyOS44NDNsLTMuMTI4LTEuMDY4IGwtMC4wNzMtMS44MTVMMjAuNzYxLDI2TDIwLjc2MSwyNnoiIG9wYWNpdHk9Ii4wNSI+PC9wYXRoPjxwYXRoIGQ9Ik0zMy4xLDEzbC0wLjUsOGwtMC43LDExLjVMMjQsMzUuMWwtNy45LTIuNkwxNS44LDI3aDRsMC4xLDIuNWw0LjEsMS40bDQuMS0xLjRsMC4zLTQuNUgyNGgtNC40bC0wLjItNEgyNGg0LjZsMC4zLTRIMjQgaC04LjlsLTAuMy00SDI0SDMzLjEgTTMzLjYzMiwxMi41SDMzLjFIMjRoLTkuMmgtMC41MzlsMC4wNCwwLjUzN2wwLjMsNGwwLjAzNSwwLjQ2M0gxNS4xSDI0aDQuMzYxbC0wLjIyNSwzSDI0aC00LjZoLTAuNTI2IGwwLjAyNiwwLjUyNWwwLjIsNGwwLjAyNCwwLjQ3NUgxOS42SDI0aDMuODY2bC0wLjI0MiwzLjYzNEwyNCwzMC4zNzJsLTMuNjE0LTEuMjM0TDIwLjMsMjYuOThMMjAuMjgsMjYuNUgxOS44aC00aC0wLjUyOCBsMC4wMjksMC41MjdsMC4zLDUuNWwwLjAxOSwwLjM0MWwwLjMyNCwwLjEwN2w3LjksMi42TDI0LDM1LjYyNmwwLjE1Ni0wLjA1MWw3LjktMi42bDAuMzIyLTAuMTA2bDAuMDIxLTAuMzM5bDAuNy0xMS41bDAuNS03Ljk5OSBMMzMuNjMyLDEyLjVMMzMuNjMyLDEyLjV6IiBvcGFjaXR5PSIuMDciPjwvcGF0aD4KPC9zdmc+"
+              alt="" loading="lazy" class="icon icon-card" />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiNmZmQ2MDAiIGQ9Ik02LDQyVjZoMzZ2MzZINnoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAwMDAxIiBkPSJNMjkuNTM4IDMyLjk0N2MuNjkyIDEuMTI0IDEuNDQ0IDIuMjAxIDMuMDM3IDIuMjAxIDEuMzM4IDAgMi4wNC0uNjY1IDIuMDQtMS41ODUgMC0xLjEwMS0uNzI2LTEuNDkyLTIuMTk4LTIuMTMzbC0uODA3LS4zNDRjLTIuMzI5LS45ODgtMy44NzgtMi4yMjYtMy44NzgtNC44NDEgMC0yLjQxIDEuODQ1LTQuMjQ0IDQuNzI4LTQuMjQ0IDIuMDUzIDAgMy41MjguNzExIDQuNTkyIDIuNTczbC0yLjUxNCAxLjYwN2MtLjU1My0uOTg4LTEuMTUxLTEuMzc3LTIuMDc4LTEuMzc3LS45NDYgMC0xLjU0NS41OTctMS41NDUgMS4zNzcgMCAuOTY0LjYgMS4zNTQgMS45ODUgMS45NTFsLjgwNy4zNDRDMzYuNDUyIDI5LjY0NSAzOCAzMC44MzkgMzggMzMuNTIzIDM4IDM2LjQxNSAzNS43MTYgMzggMzIuNjUgMzhjLTIuOTk5IDAtNC43MDItMS41MDUtNS42NS0zLjM2OEwyOS41MzggMzIuOTQ3ek0xNy45NTIgMzMuMDI5Yy41MDYuOTA2IDEuMjc1IDEuNjAzIDIuMzgxIDEuNjAzIDEuMDU4IDAgMS42NjctLjQxOCAxLjY2Ny0yLjA0M1YyMmgzLjMzM3YxMS4xMDFjMCAzLjM2Ny0xLjk1MyA0Ljg5OS00LjgwNSA0Ljg5OS0yLjU3NyAwLTQuNDM3LTEuNzQ2LTUuMTk1LTMuMzY4TDE3Ljk1MiAzMy4wMjl6Ij48L3BhdGg+Cjwvc3ZnPg=="
+              alt="" loading="lazy" class="icon icon-card" />
+          </div>
+
+          <div class="second-set animate__animated animate__pulse">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiM2NzNhYjciIGQ9Ik00MiwzN2MwLDIuNzYyLTIuMjM4LDUtNSw1SDExYy0yLjc2MSwwLTUtMi4yMzgtNS01VjExYzAtMi43NjIsMi4yMzktNSw1LTVoMjZjMi43NjIsMCw1LDIuMjM4LDUsNSBWMzd6Ij48L3BhdGg+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMzLjAzLDI1LjZjLTAuNjUtMC45LTEuNTktMS41Mi0yLjgtMS44NWMwLDAsMS4wMi0wLjM3LDEuOTQtMS43NWMwLjU1LTAuODgsMC44My0xLjk0LDAuODMtMy4xOCBjMC0yLjE1LTAuNzgtMy44LTIuMzQtNC45M0MyOS4xLDEyLjc2LDI3LjM0LDEyLDI0LjM1LDEySDE1djI0aDEwLjQzYzIuODMtMC4wMiw0Ljk2LTAuNjMsNi40MS0xLjhjMS40NC0xLjE5LDIuMTYtMi45NSwyLjE2LTUuMyBDMzQsMjcuNiwzMy42OCwyNi41LDMzLjAzLDI1LjZ6IE0yMSwxNmMwLDAsNC4xNywwLDQuMjUsMGMxLjUyLDAsMi43NSwxLjIzLDIuNzUsMi43NWMwLDEuNTItMS4yMywyLjc1LTIuNzUsMi43NSBjLTAuMDgsMC00LjI1LDAtNC4yNSwwVjE2eiBNMjYsMzJoLTV2LTZoNWMxLjY2LDAsMywxLjM0LDMsM0MyOSwzMC42NiwyNy42NiwzMiwyNiwzMnoiPjwvcGF0aD4KPC9zdmc+"
+              alt="" loading="lazy" class="icon icon-card" />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ29xZnUxWk5tRW5VclFESkVRMWJVYV9sNzVPRVVKa1BBazRfZ3IxIiB4MT0iMTAuNDU4IiB4Mj0iMjYuMzE0IiB5MT0iMTIuOTcyIiB5Mj0iMjYuMjc3IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMjZhYmU3Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDg2ZGJmIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2dvcWZ1MVpObUVuVXJRREpFUTFiVWFfbDc1T0VVSmtQQWs0X2dyMSkiIGQ9Ik0yNC4wNDcsNWMtMS41NTUsMC4wMDUtMi42MzMsMC4xNDItMy45MzYsMC4zNjdjLTMuODQ4LDAuNjctNC41NDksMi4wNzctNC41NDksNC42N1YxNGg5djIgSDE1LjIyaC00LjM1Yy0yLjYzNiwwLTQuOTQzLDEuMjQyLTUuNjc0LDQuMjE5Yy0wLjgyNiwzLjQxNy0wLjg2Myw1LjU1NywwLDkuMTI1QzUuODUxLDMyLjAwNSw3LjI5NCwzNCw5LjkzMSwzNGgzLjYzMnYtNS4xMDQgYzAtMi45NjYsMi42ODYtNS44OTYsNS43NjQtNS44OTZoNy4yMzZjMi41MjMsMCw1LTEuODYyLDUtNC4zNzd2LTguNTg2YzAtMi40MzktMS43NTktNC4yNjMtNC4yMTgtNC42NzIgQzI3LjQwNiw1LjM1OSwyNS41ODksNC45OTQsMjQuMDQ3LDV6IE0xOS4wNjMsOWMwLjgyMSwwLDEuNSwwLjY3NywxLjUsMS41MDJjMCwwLjgzMy0wLjY3OSwxLjQ5OC0xLjUsMS40OTggYy0wLjgzNywwLTEuNS0wLjY2NC0xLjUtMS40OThDMTcuNTYzLDkuNjgsMTguMjI2LDksMTkuMDYzLDl6Ij48L3BhdGg+PGxpbmVhckdyYWRpZW50IGlkPSJnb3FmdTFaTm1FblVyUURKRVExYlViX2w3NU9FVUprUEFrNF9ncjIiIHgxPSIzNS4zMzQiIHgyPSIyMy41MTciIHkxPSIzNy45MTEiIHkyPSIyMS4wMzQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZWI3MDUiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmRhMWMiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjZ29xZnUxWk5tRW5VclFESkVRMWJVYl9sNzVPRVVKa1BBazRfZ3IyKSIgZD0iTTIzLjA3OCw0M2MxLjU1NS0wLjAwNSwyLjYzMy0wLjE0MiwzLjkzNi0wLjM2N2MzLjg0OC0wLjY3LDQuNTQ5LTIuMDc3LDQuNTQ5LTQuNjdWMzRoLTl2LTIgaDkuMzQzaDQuMzVjMi42MzYsMCw0Ljk0My0xLjI0Miw1LjY3NC00LjIxOWMwLjgyNi0zLjQxNywwLjg2My01LjU1NywwLTkuMTI1QzQxLjI3NCwxNS45OTUsMzkuODMxLDE0LDM3LjE5NCwxNGgtMy42MzJ2NS4xMDQgYzAsMi45NjYtMi42ODYsNS44OTYtNS43NjQsNS44OTZoLTcuMjM2Yy0yLjUyMywwLTUsMS44NjItNSw0LjM3N3Y4LjU4NmMwLDIuNDM5LDEuNzU5LDQuMjYzLDQuMjE4LDQuNjcyIEMxOS43MTksNDIuNjQxLDIxLjUzNiw0My4wMDYsMjMuMDc4LDQzeiBNMjguMDYzLDM5Yy0wLjgyMSwwLTEuNS0wLjY3Ny0xLjUtMS41MDJjMC0wLjgzMywwLjY3OS0xLjQ5OCwxLjUtMS40OTggYzAuODM3LDAsMS41LDAuNjY0LDEuNSwxLjQ5OEMyOS41NjMsMzguMzIsMjguODk5LDM5LDI4LjA2MywzOXoiPjwvcGF0aD4KPC9zdmc+"
+              alt="" loading="lazy" class="icon icon-card" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Projects section -->
+    <!--CS PROJECTS CONTENT-->
+    <div class="row4">
+      <section class="projects" id="projects">
+        <style>
+          .projects-title {
+            text-decoration: underline;
+            text-decoration-color: var(--secondary-color);
+            text-decoration-thickness: 4px;
+          }
+        </style>
+        <h2 class="projects-title">Coding Projects</h2>
+        <div class="projects-container">
+          <div class="project-container project-card2">
+            <img src="Pythongame.png" alt="python bored game" loading="eager" class="project-pic" />
+            <h3 class="project-title">BORED GAME-PYTHON</h3>
+            <p class="project-details">
+              This was a project I designed during quarantine to cure "boredom". It includes a compilation of riddles,
+              fun
+              math trivia, math puzzles, and more. It was created using Python.
+            </p>
+            <a href="https://docs.google.com/document/d/1DtOwXvk_tFrIUmNGphw8YSngm6br2Re2E8lZztOzRo0/edit?usp=sharing"
+              target="_blank" class="project-link"><i>Check out the code!</i></a>
+          </div>
+          <div class="project-container project-card2">
+            <img src="GUIAPP.png" alt="GUIdemo" loading="eager" class="project-pic" />
+            <h3 class="project-title">Food Generator App</h3>
+            <p class="project-details2">
+              This is an interactive GUI app that can be used to get generate a random meal with a recipe and visual in a category of meals of your choice from a dropdown menu. User will also receive information about the random meal's                      
+ native country along with the full recipe in text. This application was used to learn how to incorporate multiple <b>APIs</b> and use <b>JAVAFX v.17</b> to create a GUI app.      
+            </p>
+            <a href="https://www.loom.com/share/f9079ada559a4ec4897470f592bfae63" target="_blank"
+              class="project-link"><i>Check out the demo!</i></a>
+          </div>
+          <div class="project-container project-card2">
+            <h3 class="project-title">This self-coded portfolio</h3>
+            <p class="project-details">
+              This portfolio is something I designed myself in order to learn <b>JavaScript </b>but also refresh my
+              <b>CSS and
+                HTML </b>skills. I used the platform <b>Repl</b> to design and code this portfolio. I started by reading
+              some
+              articles that explained how others coded their own portfolios and tried it out myself. I used sources like
+              W3Schools initially to learn the basics of JavaScript.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--ART SHOWCASE/PROJECTS CONTENT-->
+    <div class="row4">
+      <section class="projects" id="projects">
+        <h2 class="projects-title">Arts and Literary Showcase</h2>
+        <div class="projects-container">
+
+          <div class="project-container project-card">
+            <img src="LITMAG_POEM.png" alt="literary magazine poem" loading="eager" class="project-pic" />
+            <h3 class="project-title">Poetry</h3>
+            <p class="project-details1">
+              Everytime I meet a person or place that is very memorable, I write a poem to describe the impact it/they
+              have on me. The example in the picture above is from one of my poems that was published in my high school,
+              <b>Northview High's award-winning hybrid literary magazine publication, The Muse</b>. I wrote this poem
+              about a
+              little boy I tutored, who was diagnosed with a rare heart condition. Poetry is a beautiful
+              form of expression through which I can portray raw emotion about many events/people/places in my life.
+            </p>
+            <a href="poem.html" target="_blank" class="project-link"><i>Check it Out</i></a>
+          </div>
+          <div class="project-container project-card">
+            <img src="DS.png" alt="dancer yt thumbnail" loading="eager" class="project-pic" />
+            <h3 class="project-title">Dancer and Vocalist-Youtube channel</h3>
+            <p class="project-details">
+              My Youtube channel has a compilation of my dance and singing recitals from the age of 5. I learn
+              Bharatanatyam which is an indian classical dance form originated in Tamil Nadu. I also learn carnatic
+              music, which is a traditional indian classical music style.
+            </p>
+            <a href="https://www.youtube.com/@chithralahari/videos" target="_blank" alt="yt link"
+              class="project-link"><i>Check it
+                Out!</i></a>
+          </div>
+
+          <div class="project-container project-card">
+            <h3 class="project-title">ART SKETCHBOOK</h3>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="HANDdrawing.png" style="width: 100%">
+              <div class="text">Drawing of a Hand</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="Apple.png" style="width:100%">
+              <div class="text">An Apple</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="people.png" style="width:100%">
+              <div class="text">Draw facial structures</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 6</div>
+              <img src="god.png" style="width:100%">
+              <div class="text">Hindu religious idol</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 6</div>
+              <img src="Zoo.png" style="width:100%">
+              <div class="text">Zoo</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 6</div>
+              <img src="statue.png" style="width:100%">
+              <div class="text">Statue</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <script>
+              let slideIndex = 0;
+              showSlides();
+              function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                  slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+              }
+            </script>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center; position: fixed">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span </div>
+              <!--SLIDESHOW OF SKETCHBOOK-->
+            </div>
+
+
+
+          </div>
+      </section>
+    </div>
+    <div class="row4">
+      <section class="projects" id="projects">
+        <h2 class="projects-title" id="ars">Awards and Recognitions</h2>
+        <div class="projects-container">
+          <div class="project-container project-card">
+            <h3 class="project-title">Computing Awards</h3>
+            <!-- Full-width images with number and caption text -->
+            <div>
+              <img src="ceod.png" style="width: 50%">
+              <div class="text">Cisco Recognition </div>
+
+              <img src="ncwit.png" style="width:50%">
+              <div class="text">NCWIT National Honorable Mention + GA Affiliate Winner</div>
+              <a href="https://www.aspirations.org/2022-national-award-for-aic-recipients-announced" target="_blank"
+                class="project-link"><i>Check Out 2022
+                  Awardee List</i></a>
+            </div>
+          </div>
+          <div class="project-container project-card">
+            <h3 class="project-title">Honors & Scholarships</h3>
+            <!-- Full-width images with number and caption text -->
+            <div>
+              <img src="GSUscholarship.png" style="width: 50%">
+              <div class="text">GSU Stamps and Presidential Scholarship Recipient </div>
+              <div class="text">I was awarded the GSU Presidential Scholarship which is a HIGHLY SELECTIVE scholarship.
+                This award totals up to about $28,000 per year. </div>
+            </div>
+            <div>
+              <div class="text">UGA Charter Scholarship Recipient</div>
+              <div class="text">I am awarded the Charter Scholarship at UGA along with my Zelle Miller Scholarship.
+                The University of Georgia Charter Scholarship is awarded to students with outstanding achievement in
+                academics.</div>
+            </div>
+          </div>
+          <div class="project-container project-card">
+            <img src="das.png" alt="literary magazine poem" loading="eager" class="project-pic" />
+            <h3 class="project-title">Dance and Music Awards</h3>
+            <p class="project-details">
+              Throughout my decade long journey learning Bharatanatyam (Indian Classical Dance) and Indian classical
+              music, I have attended numerous competitions and earned recognition for my performances. I have performed
+              at the Johns Creek Arts festival, Papanasam Sivan Dance competition, Saptami Dance Competition, and more.
+            </p>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="row4">
+      <section class="projects" id="projects">
+        <h2 class="projects-title" id="ecs">Extracurriculars and Hobbies</h2>
+        <div class="projects-container">
+          <div class="project-container project-card">
+            <img src="pcsgit.png" alt="literary magazine poem" loading="eager" class="project-pic" />
+            <h3 class="project-title">Girls and STEM initiatives</h3>
+            <p class="project-details1">
+              From a high school club called <b>Girls in Tech-Bridge the Gap</b> to now founding and serving as the
+              executive director of a non-profit chapter, <b>Atlanta Chapter of ProjectCSGirls, an international
+                non-profit </b> my stem initiatives have come a long way. I have hosted CS and UX Design workshops on an
+              array of topics with 90+ young self-identifying females.
+              My chapter runs on my life motto that <b>"A Teen can change the 18"</b>. .
+            </p>
+            <a href="https://projectcsgirlsatl.weebly.com/" target="_blank" class="project-link"><i>Check Out my
+                ATL-chapter website</i></a>
+            <a href="https://nhsgirlsintech.weebly.com/" target="_blank" class="project-link"><i>Check Out my GIT club
+                website</i></a>
+          </div>
+          <div class="project-container project-card">
+            <h3 class="project-title">Photography</h3>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 9</div>
+              <img src="p1.png" style="width: 100%">
+              <div class="text"> Neighborhood lake </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 9</div>
+              <img src="p2.png" style="width:100%">
+              <div class="text">Tybee Beach Island</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 9</div>
+              <img src="p3.png" style="width:100%">
+              <div class="text">Tennesee</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 9</div>
+              <img src="p4.png" style="width:100%">
+              <div class="text">Flower Close-up</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 9</div>
+              <img src="p5.png" style="width:100%">
+              <div class="text">Flower Close-up</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 9</div>
+              <img src="p6.png" style="width:100%">
+              <div class="text">Neighborhood Sidewalk</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">7 / 9</div>
+              <img src="p7.png" style="width:100%">
+              <div class="text">Mall</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">8 / 9</div>
+              <img src="p8.png" style="width:100%">
+              <div class="text"> Tybee Island</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">9 / 9</div>
+              <img src="p9.png" style="width:100%">
+              <div class="text">Lake Lanier</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <script>
+              let slideIndex = 0;
+              showSlides();
+              function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                  slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Change image every 2 seconds
+              }
+            </script>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center; position: fixed">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span </div>
+              <!--SLIDESHOW OF SKETCHBOOK-->
+            </div>
+          </div>
+      </section>
+
+    </div>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h2>
+        <--Connect with me on LinkedIn ! (on the left)</h2>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/mahathi-gumudavelli/" target="_blank"><img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiMwMjg4ZDEiIGQ9Ik0yNCA0QTIwIDIwIDAgMSAwIDI0IDQ0QTIwIDIwIDAgMSAwIDI0IDRaIj48L3BhdGg+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0IDE5SDE4VjM0SDE0ek0xNS45ODggMTdoLS4wMjJDMTQuNzcyIDE3IDE0IDE2LjExIDE0IDE0Ljk5OSAxNCAxMy44NjQgMTQuNzk2IDEzIDE2LjAxMSAxM2MxLjIxNyAwIDEuOTY2Ljg2NCAxLjk4OSAxLjk5OUMxOCAxNi4xMSAxNy4yMjggMTcgMTUuOTg4IDE3ek0zNSAyNC41YzAtMy4wMzgtMi40NjItNS41LTUuNS01LjUtMS44NjIgMC0zLjUwNS45MjgtNC41IDIuMzQ0VjE5aC00djE1aDR2LThjMC0xLjY1NyAxLjM0My0zIDMtM3MzIDEuMzQzIDMgM3Y4aDRDMzUgMzQgMzUgMjQuOTIxIDM1IDI0LjV6Ij48L3BhdGg+Cjwvc3ZnPg=="
+          alt="Linkedin" loading="lazy" /></a>
+      <!--  <a href="#" target="_blank"><img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik00MSwyNGMwLDkuNC03LjYsMTctMTcsMTdTNywzMy40LDcsMjRTMTQuNiw3LDI0LDdTNDEsMTQuNiw0MSwyNHoiPjwvcGF0aD48cGF0aCBmaWxsPSIjNDU1YTY0IiBkPSJNMjEgNDF2LTUuNWMwLS4zLjItLjUuNS0uNXMuNS4yLjUuNVY0MWgydi02LjVjMC0uMy4yLS41LjUtLjVzLjUuMi41LjVWNDFoMnYtNS41YzAtLjMuMi0uNS41LS41cy41LjIuNS41VjQxaDEuOGMuMi0uMy4yLS42LjItMS4xVjM2YzAtMi4yLTEuOS01LjItNC4zLTUuMmgtMi41Yy0yLjMgMC00LjMgMy4xLTQuMyA1LjJ2My45YzAgLjQuMS44LjIgMS4xTDIxIDQxIDIxIDQxek00MC4xIDI2LjRDNDAuMSAyNi40IDQwLjEgMjYuNCA0MC4xIDI2LjRjMCAwLTEuMy0uNC0yLjQtLjQgMCAwLS4xIDAtLjEgMC0xLjEgMC0yLjkuMy0yLjkuMy0uMSAwLS4xIDAtLjEtLjEgMC0uMSAwLS4xLjEtLjEuMSAwIDItLjMgMy4xLS4zIDEuMSAwIDIuNC40IDIuNS40LjEgMCAuMS4xLjEuMkM0MC4yIDI2LjMgNDAuMiAyNi40IDQwLjEgMjYuNHpNMzkuOCAyNy4yQzM5LjggMjcuMiAzOS44IDI3LjIgMzkuOCAyNy4yYzAgMC0xLjQtLjQtMi42LS40LS45IDAtMyAuMi0zLjEuMi0uMSAwLS4xIDAtLjEtLjEgMC0uMSAwLS4xLjEtLjEuMSAwIDIuMi0uMiAzLjEtLjIgMS4zIDAgMi42LjQgMi42LjQuMSAwIC4xLjEuMS4yQzM5LjkgMjcuMSAzOS45IDI3LjIgMzkuOCAyNy4yek03LjggMjYuNGMtLjEgMC0uMSAwLS4xLS4xIDAtLjEgMC0uMS4xLS4yLjgtLjIgMi40LS41IDMuMy0uNS44IDAgMy41LjIgMy42LjIuMSAwIC4xLjEuMS4xIDAgLjEtLjEuMS0uMS4xIDAgMC0yLjctLjItMy41LS4yQzEwLjEgMjYgOC42IDI2LjIgNy44IDI2LjQgNy44IDI2LjQgNy44IDI2LjQgNy44IDI2LjR6TTguMiAyNy45YzAgMC0uMSAwLS4xLS4xIDAtLjEgMC0uMSAwLS4yLjEgMCAxLjQtLjggMi45LTEgMS4zLS4yIDQgLjEgNC4yLjEuMSAwIC4xLjEuMS4xIDAgLjEtLjEuMS0uMS4xIDAgMCAwIDAgMCAwIDAgMC0yLjgtLjMtNC4xLS4xQzkuNiAyNy4xIDguMiAyNy45IDguMiAyNy45IDguMiAyNy45IDguMiAyNy45IDguMiAyNy45eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM0NTVhNjQiIGQ9Ik0xNC4yLDIzLjVjMC00LjQsNC42LTguNSwxMC4zLTguNWM1LjcsMCwxMC4zLDQsMTAuMyw4LjVTMzEuNSwzMSwyNC41LDMxUzE0LjIsMjcuOSwxNC4yLDIzLjV6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzQ1NWE2NCIgZD0iTTI4LjYgMTYuM2MwIDAgMS43LTIuMyA0LjgtMi4zIDEuMiAxLjIuNCA0LjggMCA1LjhMMjguNiAxNi4zek0yMC40IDE2LjNjMCAwLTEuNy0yLjMtNC44LTIuMy0xLjIgMS4yLS40IDQuOCAwIDUuOEwyMC40IDE2LjN6TTIwLjEgMzUuOWMwIDAtMi4zIDAtMi44IDAtMS4yIDAtMi4zLS41LTIuOC0xLjUtLjYtMS4xLTEuMS0yLjMtMi42LTMuMy0uMy0uMi0uMS0uNC40LS40LjUuMSAxLjQuMiAyLjEgMS4xLjcuOSAxLjUgMiAyLjggMiAxLjMgMCAyLjcgMCAzLjUtLjlMMjAuMSAzNS45eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMGJjZDQiIGQ9Ik0yNCw0QzEzLDQsNCwxMyw0LDI0czksMjAsMjAsMjBzMjAtOSwyMC0yMFMzNSw0LDI0LDR6IE0yNCw0MGMtOC44LDAtMTYtNy4yLTE2LTE2UzE1LjIsOCwyNCw4IHMxNiw3LjIsMTYsMTZTMzIuOCw0MCwyNCw0MHoiPjwvcGF0aD4KPC9zdmc+"
+          alt="Github" /></a> -->
+    </div>
+
+  </div>
+  <!-- Scroll to top -->
+
+  <!-- Footer section -->
+
+  <!-- Website scripts -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Ion icons scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
